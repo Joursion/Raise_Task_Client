@@ -1,0 +1,131 @@
+env:
+  es6: true
+  node: true
+extends: 'eslint:recommended'
+parserOptions:
+  ecmaVersion: 8
+  sourceType: module
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+globals:
+  debugConsole: true
+  Promise: true
+  Meteor: true
+  window: true
+  describe: true
+  it: true
+rules:
+  indent:
+    - error
+    - 4
+    - SwitchCase: 1
+  quotes:
+    - error
+    - single
+    - allowTemplateLiterals: true
+  semi:
+    - error
+    - always
+  no-console:
+    - off
+  no-extra-boolean-cast: off
+  no-use-before-define: error
+  space-unary-ops: error
+  no-else-return: error
+  no-dupe-args: error
+  no-dupe-keys: error
+  no-empty: error
+  no-empty-character-class: error
+  no-irregular-whitespace: error
+  no-unexpected-multiline: error
+  valid-typeof: error
+  complexity: 
+    - error
+    - 9
+  eqeqeq:
+    - error
+    - allow-null
+  guard-for-in: error
+  no-caller: error
+  no-eval: error
+  no-extend-native: error
+  no-extra-bind: error
+  no-implied-eval: warn
+  no-loop-func: error
+  no-magic-numbers: off
+  no-native-reassign: error 
+  no-redeclare: error
+  no-self-assign: error
+  no-self-compare: error
+  no-sequences: error
+  no-unmodified-loop-condition: error 
+  no-useless-call: error
+  no-useless-concat: error 
+  no-with: error
+
+  #################  #################
+  no-catch-shadow: error
+  no-shadow-restricted-names: error
+  no-undef: error
+  no-unused-vars:
+    - error
+    - vars: all
+      args: none
+
+  ################### Style ###################
+  camelcase: 
+    - error
+    - properties: never 
+  eol-last: off
+  key-spacing: 
+    - error
+    - beforeColon: false
+      mode: strict
+  lines-around-comment:
+    - error
+    - allowBlockStart: true
+      allowObjectStart: true
+      allowArrayStart: true
+  space-before-blocks: error 
+  keyword-spacing: 
+    - error
+    - before: true
+      after: true
+  arrow-spacing: 
+    - error
+    - before: true
+      after: true
+  brace-style:
+    - error
+  max-len: 
+    - warn
+    - 120
+  max-params: 
+    - warn
+    - 7
+  no-lonely-if: 
+    - warn
+  no-mixed-spaces-and-tabs: error 
+  no-multiple-empty-lines: 
+    - warn
+    - max: 1 
+  no-trailing-spaces: error 
+  no-unneeded-ternary: warn 
+  no-whitespace-before-property: error 
+  space-before-function-paren: error 
+  space-infix-ops:
+    - error
+  #### ES6
+  generator-star-spacing: 
+    - error
+    - before: true
+      after: true
+  no-class-assign: error
+  no-dupe-class-members: error 
+  no-this-before-super: error
+  no-useless-computed-key: error
+  no-var: error
+  prefer-spread: 
+    - error
+  prefer-template: off 
+  prefer-rest-params: warn
