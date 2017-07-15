@@ -1,7 +1,10 @@
 env:
   es6: true
   node: true
-extends: 'eslint:recommended'
+# extends: ["eslint:recommended", "plugin:react/recommended"]
+extends:
+  - 'eslint:recommended'
+  # - 'plugin:react/recommended'
 parserOptions:
   ecmaVersion: 8
   sourceType: module
@@ -23,9 +26,7 @@ rules:
     - error
     - single
     - allowTemplateLiterals: true
-  semi:
-    - error
-    - always
+  # semi:
   no-console:
     - off
   no-extra-boolean-cast: off

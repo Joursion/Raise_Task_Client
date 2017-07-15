@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { View, Image } from 'react-native'
 
 const defaultStyle = {
     width: 20,
@@ -12,11 +13,14 @@ class Img extends Component {
     }
 
     render() {
-        let { style = defaultStyle, url } = this.props
+        let { style = defaultStyle, uri } = this.props
         return (
-            <div>
-                <img {...style} url = {url} />
-            </div>
+            <View>
+                <Image
+                    style={style}
+                    source={{ uri: uri }}
+                />
+            </View>
         )
     }
 }
