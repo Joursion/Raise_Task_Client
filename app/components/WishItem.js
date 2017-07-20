@@ -15,7 +15,7 @@ class WishItem extends Component {
             <View style={style.containr}>
                 <Text style={style.wishTitle}> {this.props.title} </Text>
                 <Text style={style.wishContent}>{this.props.content} </Text>
-                <Progress {this.props.progress} />
+                <Progress progress={this.props.progress} />
             </View>
         )
     }
